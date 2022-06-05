@@ -1,14 +1,7 @@
 opam-version: "2.0"
-synopsis: "Private libraries of Dune"
-description: """
-!!!!!!!!!!!!!!!!!!!!!!
-!!!!! DO NOT USE !!!!!
-!!!!!!!!!!!!!!!!!!!!!!
-
-This package contains code that is shared between various dune-xxx
-packages. However, it is not meant for public consumption and provides
-no stability guarantee.
-"""
+synopsis: "XDG Base Directory Specification"
+description:
+  "https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html"
 maintainer: ["Jane Street Group, LLC <opensource@janestreet.com>"]
 authors: ["Jane Street Group, LLC <opensource@janestreet.com>"]
 license: "MIT"
@@ -17,10 +10,6 @@ doc: "https://dune.readthedocs.io/"
 bug-reports: "https://github.com/ocaml/dune/issues"
 depends: [
   "dune" {>= "3.0"}
-  "csexp" {>= "1.5.0"}
-  "pp" {>= "1.1.0"}
-  "dyn" {= version}
-  "stdune" {= version}
   "ocaml" {>= "4.08"}
   "odoc" {with-doc}
 ]

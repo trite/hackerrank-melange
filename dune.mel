@@ -1,0 +1,46 @@
+;;;;{BSB GENERATED: NO EDIT
+(subdir ./src
+(rule
+(targets  Main.ast)
+ (deps (:inputs  Main.re) )
+(action
+ (run melc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if %{bin-available:melc}) )
+ (rule
+(targets  Main.d)
+ (deps (:inputs  .././src/Main.ast) )
+(action (run meldep -cwd ./src -root /mnt/c/git/hackerrank-melange  %{inputs}))
+(enabled_if %{bin-available:melc}) )
+ (rule
+(targets  Main.cmj Main.cmi Main.cmt Main.bs.js)
+ (deps (:inputs  Main.ast)  (include Main.d) ../bsconfig.json)
+(action
+  (run melc -bs-re-out -I .    -w a -bs-package-name melange-basic-project -bs-package-output commonjs:./src:.bs.js -o Main.cmj %{inputs}))
+(enabled_if %{bin-available:melc}) )
+ (rule
+(targets  Hello.ast)
+ (deps (:inputs  Hello.ml) )
+(action
+ (run melc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if %{bin-available:melc}) )
+ (rule
+(targets  Hello.d)
+ (deps (:inputs  .././src/Hello.ast) )
+(action (run meldep -cwd ./src -root /mnt/c/git/hackerrank-melange  %{inputs}))
+(enabled_if %{bin-available:melc}) )
+ (rule
+(targets  Hello.cmj Hello.cmi Hello.cmt Hello.bs.js)
+ (deps (:inputs  Hello.ast)  (include Hello.d) ../bsconfig.json)
+(action
+  (run melc -I .    -w a -bs-package-name melange-basic-project -bs-package-output commonjs:./src:.bs.js -o Hello.cmj %{inputs}))
+(enabled_if %{bin-available:melc}) )
+ 
+(alias (name bsb_world)(deps  Hello.bs.js Main.bs.js)
+(enabled_if %{bin-available:melc})))
+
+
+(subdir .melange.eobjs)
+
+(data_only_dirs node_modules .melange.eobjs)
+(alias (name bsb_world))
+;;;;BSB GENERATED: NO EDIT}
