@@ -1,5 +1,6 @@
 ;;;;{BSB GENERATED: NO EDIT
 (subdir ./src
+(dirs :standard utils)
 (rule
 (targets  Main.ast)
  (deps (:inputs  Main.re) )
@@ -15,7 +16,7 @@
 (targets  Main.cmj Main.cmi Main.cmt Main.bs.js)
  (deps (:inputs  Main.ast)  (include Main.d) ../bsconfig.json)
 (action
-  (run melc -bs-re-out -I .    -w a -bs-package-name melange-basic-project -bs-package-output commonjs:./src:.bs.js -o Main.cmj %{inputs}))
+  (run melc -bs-re-out -I ./utils -I .    -w a -bs-package-name melange-basic-project -bs-package-output commonjs:./src:.bs.js -o Main.cmj %{inputs}))
 (enabled_if %{bin-available:melc}) )
  (rule
 (targets  Hello.ast)
@@ -32,10 +33,116 @@
 (targets  Hello.cmj Hello.cmi Hello.cmt Hello.bs.js)
  (deps (:inputs  Hello.ast)  (include Hello.d) ../bsconfig.json)
 (action
-  (run melc -I .    -w a -bs-package-name melange-basic-project -bs-package-output commonjs:./src:.bs.js -o Hello.cmj %{inputs}))
+  (run melc -I ./utils -I .    -w a -bs-package-name melange-basic-project -bs-package-output commonjs:./src:.bs.js -o Hello.cmj %{inputs}))
+(enabled_if %{bin-available:melc}) )
+ (rule
+(targets  AVeryBigSum.ast)
+ (deps (:inputs  AVeryBigSum.re) )
+(action
+ (run melc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if %{bin-available:melc}) )
+ (rule
+(targets  AVeryBigSum.d)
+ (deps (:inputs  .././src/AVeryBigSum.ast) )
+(action (run meldep -cwd ./src -root /mnt/c/git/hackerrank-melange  %{inputs}))
+(enabled_if %{bin-available:melc}) )
+ (rule
+(targets  AVeryBigSum.cmj AVeryBigSum.cmi AVeryBigSum.cmt AVeryBigSum.bs.js)
+ (deps (:inputs  AVeryBigSum.ast)  (include AVeryBigSum.d) ../bsconfig.json)
+(action
+  (run melc -bs-re-out -I ./utils -I .    -w a -bs-package-name melange-basic-project -bs-package-output commonjs:./src:.bs.js -o AVeryBigSum.cmj %{inputs}))
+(enabled_if %{bin-available:melc}) )
+ (rule
+(targets  CompareTheTriplets.ast)
+ (deps (:inputs  CompareTheTriplets.re) )
+(action
+ (run melc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if %{bin-available:melc}) )
+ (rule
+(targets  CompareTheTriplets.d)
+ (deps (:inputs  .././src/CompareTheTriplets.ast) )
+(action (run meldep -cwd ./src -root /mnt/c/git/hackerrank-melange  %{inputs}))
+(enabled_if %{bin-available:melc}) )
+ (rule
+(targets  CompareTheTriplets.cmj CompareTheTriplets.cmi CompareTheTriplets.cmt CompareTheTriplets.bs.js)
+ (deps (:inputs  CompareTheTriplets.ast)  (include CompareTheTriplets.d) ../bsconfig.json)
+(action
+  (run melc -bs-re-out -I ./utils -I .    -w a -bs-package-name melange-basic-project -bs-package-output commonjs:./src:.bs.js -o CompareTheTriplets.cmj %{inputs}))
+(enabled_if %{bin-available:melc}) )
+ (rule
+(targets  DiagonalDifference.ast)
+ (deps (:inputs  DiagonalDifference.re) )
+(action
+ (run melc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if %{bin-available:melc}) )
+ (rule
+(targets  DiagonalDifference.d)
+ (deps (:inputs  .././src/DiagonalDifference.ast) )
+(action (run meldep -cwd ./src -root /mnt/c/git/hackerrank-melange  %{inputs}))
+(enabled_if %{bin-available:melc}) )
+ (rule
+(targets  DiagonalDifference.cmj DiagonalDifference.cmi DiagonalDifference.cmt DiagonalDifference.bs.js)
+ (deps (:inputs  DiagonalDifference.ast)  (include DiagonalDifference.d) ../bsconfig.json)
+(action
+  (run melc -bs-re-out -I ./utils -I .    -w a -bs-package-name melange-basic-project -bs-package-output commonjs:./src:.bs.js -o DiagonalDifference.cmj %{inputs}))
+(enabled_if %{bin-available:melc}) )
+ (rule
+(targets  StringInterpolation.ast)
+ (deps (:inputs  StringInterpolation.re) )
+(action
+ (run melc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if %{bin-available:melc}) )
+ (rule
+(targets  StringInterpolation.d)
+ (deps (:inputs  .././src/StringInterpolation.ast) )
+(action (run meldep -cwd ./src -root /mnt/c/git/hackerrank-melange  %{inputs}))
+(enabled_if %{bin-available:melc}) )
+ (rule
+(targets  StringInterpolation.cmj StringInterpolation.cmi StringInterpolation.cmt StringInterpolation.bs.js)
+ (deps (:inputs  StringInterpolation.ast)  (include StringInterpolation.d) ../bsconfig.json)
+(action
+  (run melc -bs-re-out -I ./utils -I .    -w a -bs-package-name melange-basic-project -bs-package-output commonjs:./src:.bs.js -o StringInterpolation.cmj %{inputs}))
 (enabled_if %{bin-available:melc}) )
  
-(alias (name bsb_world)(deps  Hello.bs.js Main.bs.js)
+(alias (name bsb_world)(deps  StringInterpolation.bs.js DiagonalDifference.bs.js CompareTheTriplets.bs.js AVeryBigSum.bs.js Hello.bs.js Main.bs.js)
+(enabled_if %{bin-available:melc})))
+(subdir ./src/utils
+(rule
+(targets  Trelude.ast)
+ (deps (:inputs  Trelude.re) )
+(action
+ (run melc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if %{bin-available:melc}) )
+ (rule
+(targets  Trelude.d)
+ (deps (:inputs  ../.././src/utils/Trelude.ast) )
+(action (run meldep -cwd ./src/utils -root /mnt/c/git/hackerrank-melange  %{inputs}))
+(enabled_if %{bin-available:melc}) )
+ (rule
+(targets  Trelude.cmj Trelude.cmi Trelude.cmt Trelude.bs.js)
+ (deps (:inputs  Trelude.ast)  (include Trelude.d) ../../bsconfig.json)
+(action
+  (run melc -bs-re-out -I . -I ..    -w a -bs-package-name melange-basic-project -bs-package-output commonjs:./src/utils:.bs.js -o Trelude.cmj %{inputs}))
+(enabled_if %{bin-available:melc}) )
+ (rule
+(targets  Readline.ast)
+ (deps (:inputs  Readline.re) )
+(action
+ (run melc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if %{bin-available:melc}) )
+ (rule
+(targets  Readline.d)
+ (deps (:inputs  ../.././src/utils/Readline.ast) )
+(action (run meldep -cwd ./src/utils -root /mnt/c/git/hackerrank-melange  %{inputs}))
+(enabled_if %{bin-available:melc}) )
+ (rule
+(targets  Readline.cmj Readline.cmi Readline.cmt Readline.bs.js)
+ (deps (:inputs  Readline.ast)  (include Readline.d) ../../bsconfig.json)
+(action
+  (run melc -bs-re-out -I . -I ..    -w a -bs-package-name melange-basic-project -bs-package-output commonjs:./src/utils:.bs.js -o Readline.cmj %{inputs}))
+(enabled_if %{bin-available:melc}) )
+ 
+(alias (name bsb_world)(deps  Readline.bs.js Trelude.bs.js)
 (enabled_if %{bin-available:melc})))
 
 

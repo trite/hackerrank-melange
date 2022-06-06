@@ -1,14 +1,18 @@
 {
   "name": "melange-basic-project",
   "version": "0.0.1",
-  "sources": {
-    "dir" : "src"
+  "sources": 
+  {
+    "dir": "src",
+    "subdirs": true
   },
   "package-specs": {
     "module": "commonjs"
   },
   "suffix": ".bs.js",
   "bs-dependencies": [
+  ],
+  "bsc-flags": [
   ],
   "warnings": {
     "error" : "+101"
