@@ -15,9 +15,7 @@
   "esy": {
     "buildsInSource": "_build",
     "build": [
-      "rm -rf node_modules/bs-platform",
-      "ln -sfn #{melange.install} node_modules/bs-platform",
-      "mel build"
+      "env NODE_PATH=#{melange.install}:$NODE_PATH mel build"
     ]
   },
   "installConfig": {

@@ -16,7 +16,7 @@
 (targets  Main.cmj Main.cmi Main.cmt Main.bs.js)
  (deps (:inputs  Main.ast)  (include Main.d) ../bsconfig.json)
 (action
-  (run melc -bs-re-out -I ./utils -I .    -w a -bs-package-name melange-basic-project -bs-package-output commonjs:./src:.bs.js -o Main.cmj %{inputs}))
+  (run melc -bs-re-out -I ./utils -I .    -w a -bs-package-name melange-basic-project -bs-package-output es6:./src:.bs.js -o Main.cmj %{inputs}))
 (enabled_if %{bin-available:melc}) )
  (rule
 (targets  Hello.ast)
@@ -33,7 +33,7 @@
 (targets  Hello.cmj Hello.cmi Hello.cmt Hello.bs.js)
  (deps (:inputs  Hello.ast)  (include Hello.d) ../bsconfig.json)
 (action
-  (run melc -I ./utils -I .    -w a -bs-package-name melange-basic-project -bs-package-output commonjs:./src:.bs.js -o Hello.cmj %{inputs}))
+  (run melc -I ./utils -I .    -w a -bs-package-name melange-basic-project -bs-package-output es6:./src:.bs.js -o Hello.cmj %{inputs}))
 (enabled_if %{bin-available:melc}) )
  (rule
 (targets  AVeryBigSum.ast)
@@ -50,7 +50,7 @@
 (targets  AVeryBigSum.cmj AVeryBigSum.cmi AVeryBigSum.cmt AVeryBigSum.bs.js)
  (deps (:inputs  AVeryBigSum.ast)  (include AVeryBigSum.d) ../bsconfig.json)
 (action
-  (run melc -bs-re-out -I ./utils -I .    -w a -bs-package-name melange-basic-project -bs-package-output commonjs:./src:.bs.js -o AVeryBigSum.cmj %{inputs}))
+  (run melc -bs-re-out -I ./utils -I .    -w a -bs-package-name melange-basic-project -bs-package-output es6:./src:.bs.js -o AVeryBigSum.cmj %{inputs}))
 (enabled_if %{bin-available:melc}) )
  (rule
 (targets  CompareTheTriplets.ast)
@@ -67,7 +67,7 @@
 (targets  CompareTheTriplets.cmj CompareTheTriplets.cmi CompareTheTriplets.cmt CompareTheTriplets.bs.js)
  (deps (:inputs  CompareTheTriplets.ast)  (include CompareTheTriplets.d) ../bsconfig.json)
 (action
-  (run melc -bs-re-out -I ./utils -I .    -w a -bs-package-name melange-basic-project -bs-package-output commonjs:./src:.bs.js -o CompareTheTriplets.cmj %{inputs}))
+  (run melc -bs-re-out -I ./utils -I .    -w a -bs-package-name melange-basic-project -bs-package-output es6:./src:.bs.js -o CompareTheTriplets.cmj %{inputs}))
 (enabled_if %{bin-available:melc}) )
  (rule
 (targets  DiagonalDifference.ast)
@@ -84,7 +84,7 @@
 (targets  DiagonalDifference.cmj DiagonalDifference.cmi DiagonalDifference.cmt DiagonalDifference.bs.js)
  (deps (:inputs  DiagonalDifference.ast)  (include DiagonalDifference.d) ../bsconfig.json)
 (action
-  (run melc -bs-re-out -I ./utils -I .    -w a -bs-package-name melange-basic-project -bs-package-output commonjs:./src:.bs.js -o DiagonalDifference.cmj %{inputs}))
+  (run melc -bs-re-out -I ./utils -I .    -w a -bs-package-name melange-basic-project -bs-package-output es6:./src:.bs.js -o DiagonalDifference.cmj %{inputs}))
 (enabled_if %{bin-available:melc}) )
  (rule
 (targets  StringInterpolation.ast)
@@ -101,7 +101,7 @@
 (targets  StringInterpolation.cmj StringInterpolation.cmi StringInterpolation.cmt StringInterpolation.bs.js)
  (deps (:inputs  StringInterpolation.ast)  (include StringInterpolation.d) ../bsconfig.json)
 (action
-  (run melc -bs-re-out -I ./utils -I .    -w a -bs-package-name melange-basic-project -bs-package-output commonjs:./src:.bs.js -o StringInterpolation.cmj %{inputs}))
+  (run melc -bs-re-out -I ./utils -I .    -w a -bs-package-name melange-basic-project -bs-package-output es6:./src:.bs.js -o StringInterpolation.cmj %{inputs}))
 (enabled_if %{bin-available:melc}) )
  
 (alias (name bsb_world)(deps  StringInterpolation.bs.js DiagonalDifference.bs.js CompareTheTriplets.bs.js AVeryBigSum.bs.js Hello.bs.js Main.bs.js)
@@ -122,7 +122,7 @@
 (targets  Trelude.cmj Trelude.cmi Trelude.cmt Trelude.bs.js)
  (deps (:inputs  Trelude.ast)  (include Trelude.d) ../../bsconfig.json)
 (action
-  (run melc -bs-re-out -I . -I ..    -w a -bs-package-name melange-basic-project -bs-package-output commonjs:./src/utils:.bs.js -o Trelude.cmj %{inputs}))
+  (run melc -bs-re-out -I . -I ..    -w a -bs-package-name melange-basic-project -bs-package-output es6:./src/utils:.bs.js -o Trelude.cmj %{inputs}))
 (enabled_if %{bin-available:melc}) )
  (rule
 (targets  Readline.ast)
@@ -139,7 +139,7 @@
 (targets  Readline.cmj Readline.cmi Readline.cmt Readline.bs.js)
  (deps (:inputs  Readline.ast)  (include Readline.d) ../../bsconfig.json)
 (action
-  (run melc -bs-re-out -I . -I ..    -w a -bs-package-name melange-basic-project -bs-package-output commonjs:./src/utils:.bs.js -o Readline.cmj %{inputs}))
+  (run melc -bs-re-out -I . -I ..    -w a -bs-package-name melange-basic-project -bs-package-output es6:./src/utils:.bs.js -o Readline.cmj %{inputs}))
 (enabled_if %{bin-available:melc}) )
  
 (alias (name bsb_world)(deps  Readline.bs.js Trelude.bs.js)
