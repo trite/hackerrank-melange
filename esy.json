@@ -2,8 +2,8 @@
   "name": "melange-project",
   "dependencies": {
     "ocaml": "4.14.0",
-    "@opam/dune": "3.1.0",
-    "melange": "melange-re/melange#53a354a69172629033ce63d2d8eb9d8ea7ad1cdc"
+    "@opam/dune": "3.2.0",
+    "melange": "melange-re/melange"
   },
   "devDependencies": {
     "@opam/ocaml-lsp-server": "ocaml/ocaml-lsp:ocaml-lsp-server.opam#c275140",
@@ -13,9 +13,10 @@
     "@opam/reason": "reasonml/reason:reason.opam#4f6ff7616bfa699059d642a3d16d8905d83555f6"
   },
   "esy": {
-    "buildsInSource": "_build",
+    "buildsInSource": "unsafe",
     "build": [
-      "env NODE_PATH=#{melange.install}:$NODE_PATH mel build"
+      "ln -sfn #{melange.install} node_modules/melange",
+      "mel build"
     ]
   },
   "installConfig": {
