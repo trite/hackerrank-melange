@@ -1,10 +1,39 @@
+# Start of Normal Melange gitignore, minus _build
 .DS_Store
 node_modules
 lib
-_build
 _esy
 .bsb.lock
 .merlin
 dune
 dune.bsb
 .melange.eobjs
+# End of Normal Melange gitignore, minus _build
+
+
+
+
+
+# Re-include .bs.js build files
+# Can't find a better way than this so far :-(
+
+!
+!_build/
+_build/*
+!_build/default/
+_build/default/*
+
+# First level of .bs.js allows
+!_build/default/src/
+_build/default/src/*
+!_build/default/src/*.bs.js
+
+# Second level of .bs.js allows
+!_build/default/src/*/
+_build/default/src/*/*
+!_build/default/src/*/*.bs.js
+
+# Third level of .bs.js allows
+!_build/default/src/*/*/
+_build/default/src/*/*/*
+!_build/default/src/*/*/*.bs.js
