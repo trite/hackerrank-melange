@@ -1,12 +1,12 @@
 {
-    "name": "hackerrank-melange-webpack-only-part",
-    "version": "0.1.0",
-    "private": true,
-    "scripts": {
-        "hackify": "npx webpack build -t \"node\" --mode production --entry "
-    },
-    "devDependencies": {
-        "webpack": "5.72.1",
-        "webpack-cli": "^4.9.2"
-    }
+  "name": "hackerrank-melange-webpack-only-part",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "hackify": "webpack build -t \"node\" --mode production --entry "
+  },
+  "devDependencies": {
+    "webpack": "5.72.1",
+    "webpack-cli": "^4.9.2"
+  }
 }
