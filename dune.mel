@@ -10,7 +10,7 @@
  (rule
 (targets  Main.d)
  (deps (:inputs  .././src/Main.ast) )
-(action (run meldep -root-dir /Users/anmonteiro/projects/gh-feed-reader/hackerrank-melange -cwd ./src -p melange-basic-project -proj-dir /Users/anmonteiro/projects/gh-feed-reader/hackerrank-melange  %{inputs}))
+(action (run meldep -root-dir /mnt/c/git/hackerrank-melange -cwd ./src -p melange-basic-project -proj-dir /mnt/c/git/hackerrank-melange  %{inputs}))
 (enabled_if %{bin-available:melc}) )
  (rule
 (targets  Main.cmj Main.cmi Main.cmt Main.bs.js)
@@ -27,7 +27,7 @@
  (rule
 (targets  Hello.d)
  (deps (:inputs  .././src/Hello.ast) )
-(action (run meldep -root-dir /Users/anmonteiro/projects/gh-feed-reader/hackerrank-melange -cwd ./src -p melange-basic-project -proj-dir /Users/anmonteiro/projects/gh-feed-reader/hackerrank-melange  %{inputs}))
+(action (run meldep -root-dir /mnt/c/git/hackerrank-melange -cwd ./src -p melange-basic-project -proj-dir /mnt/c/git/hackerrank-melange  %{inputs}))
 (enabled_if %{bin-available:melc}) )
  (rule
 (targets  Hello.cmj Hello.cmi Hello.cmt Hello.bs.js)
@@ -44,7 +44,7 @@
  (rule
 (targets  AVeryBigSum.d)
  (deps (:inputs  .././src/AVeryBigSum.ast) )
-(action (run meldep -root-dir /Users/anmonteiro/projects/gh-feed-reader/hackerrank-melange -cwd ./src -p melange-basic-project -proj-dir /Users/anmonteiro/projects/gh-feed-reader/hackerrank-melange  %{inputs}))
+(action (run meldep -root-dir /mnt/c/git/hackerrank-melange -cwd ./src -p melange-basic-project -proj-dir /mnt/c/git/hackerrank-melange  %{inputs}))
 (enabled_if %{bin-available:melc}) )
  (rule
 (targets  AVeryBigSum.cmj AVeryBigSum.cmi AVeryBigSum.cmt AVeryBigSum.bs.js)
@@ -61,7 +61,7 @@
  (rule
 (targets  CompareTheTriplets.d)
  (deps (:inputs  .././src/CompareTheTriplets.ast) )
-(action (run meldep -root-dir /Users/anmonteiro/projects/gh-feed-reader/hackerrank-melange -cwd ./src -p melange-basic-project -proj-dir /Users/anmonteiro/projects/gh-feed-reader/hackerrank-melange  %{inputs}))
+(action (run meldep -root-dir /mnt/c/git/hackerrank-melange -cwd ./src -p melange-basic-project -proj-dir /mnt/c/git/hackerrank-melange  %{inputs}))
 (enabled_if %{bin-available:melc}) )
  (rule
 (targets  CompareTheTriplets.cmj CompareTheTriplets.cmi CompareTheTriplets.cmt CompareTheTriplets.bs.js)
@@ -78,7 +78,7 @@
  (rule
 (targets  DiagonalDifference.d)
  (deps (:inputs  .././src/DiagonalDifference.ast) )
-(action (run meldep -root-dir /Users/anmonteiro/projects/gh-feed-reader/hackerrank-melange -cwd ./src -p melange-basic-project -proj-dir /Users/anmonteiro/projects/gh-feed-reader/hackerrank-melange  %{inputs}))
+(action (run meldep -root-dir /mnt/c/git/hackerrank-melange -cwd ./src -p melange-basic-project -proj-dir /mnt/c/git/hackerrank-melange  %{inputs}))
 (enabled_if %{bin-available:melc}) )
  (rule
 (targets  DiagonalDifference.cmj DiagonalDifference.cmi DiagonalDifference.cmt DiagonalDifference.bs.js)
@@ -95,7 +95,7 @@
  (rule
 (targets  StringInterpolation.d)
  (deps (:inputs  .././src/StringInterpolation.ast) )
-(action (run meldep -root-dir /Users/anmonteiro/projects/gh-feed-reader/hackerrank-melange -cwd ./src -p melange-basic-project -proj-dir /Users/anmonteiro/projects/gh-feed-reader/hackerrank-melange  %{inputs}))
+(action (run meldep -root-dir /mnt/c/git/hackerrank-melange -cwd ./src -p melange-basic-project -proj-dir /mnt/c/git/hackerrank-melange  %{inputs}))
 (enabled_if %{bin-available:melc}) )
  (rule
 (targets  StringInterpolation.cmj StringInterpolation.cmi StringInterpolation.cmt StringInterpolation.bs.js)
@@ -116,7 +116,7 @@
  (rule
 (targets  Trelude.d)
  (deps (:inputs  ../.././src/utils/Trelude.ast) )
-(action (run meldep -root-dir /Users/anmonteiro/projects/gh-feed-reader/hackerrank-melange -cwd ./src/utils -p melange-basic-project -proj-dir /Users/anmonteiro/projects/gh-feed-reader/hackerrank-melange  %{inputs}))
+(action (run meldep -root-dir /mnt/c/git/hackerrank-melange -cwd ./src/utils -p melange-basic-project -proj-dir /mnt/c/git/hackerrank-melange  %{inputs}))
 (enabled_if %{bin-available:melc}) )
  (rule
 (targets  Trelude.cmj Trelude.cmi Trelude.cmt Trelude.bs.js)
@@ -133,7 +133,7 @@
  (rule
 (targets  Readline.d)
  (deps (:inputs  ../.././src/utils/Readline.ast) )
-(action (run meldep -root-dir /Users/anmonteiro/projects/gh-feed-reader/hackerrank-melange -cwd ./src/utils -p melange-basic-project -proj-dir /Users/anmonteiro/projects/gh-feed-reader/hackerrank-melange  %{inputs}))
+(action (run meldep -root-dir /mnt/c/git/hackerrank-melange -cwd ./src/utils -p melange-basic-project -proj-dir /mnt/c/git/hackerrank-melange  %{inputs}))
 (enabled_if %{bin-available:melc}) )
  (rule
 (targets  Readline.cmj Readline.cmi Readline.cmt Readline.bs.js)
