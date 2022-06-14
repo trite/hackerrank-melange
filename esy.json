@@ -4,8 +4,8 @@
     "ocaml": "4.14.0",
     "@opam/dune": ">= 3.1.0",
     "melange": "melange-re/melange#53a354a69172629033ce63d2d8eb9d8ea7ad1cdc",
-    "bs-bastet": "1.2.5",
-    "relude": "0.65.0"
+    "bs-bastet": "2.0.0",
+    "relude": "reazen/relude#498c8c59ce4891541825ddf54ee63a07cb7f2968"
   },
   "devDependencies": {
     "@opam/ocaml-lsp-server": "ocaml/ocaml-lsp:ocaml-lsp-server.opam#c275140",
