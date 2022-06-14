@@ -1,8 +1,7 @@
 {
   "name": "melange-basic-project",
   "version": "0.0.1",
-  "sources": 
-  {
+  "sources": {
     "dir": "src",
     "subdirs": true
   },
@@ -11,10 +10,11 @@
   },
   "suffix": ".bs.js",
   "bs-dependencies": [
+    "bs-bastet",
+    "relude"
   ],
-  "bsc-flags": [
-  ],
+  "bsc-flags": [],
   "warnings": {
-    "error" : "+101"
+    "error": "+101"
   }
 }
