@@ -2,13 +2,12 @@
 
 import * as Curry from "melange/lib/es6/curry.js";
 import * as Stdlib from "melange/lib/es6/stdlib.js";
+import * as Js_list from "melange/lib/es6/js_list.js";
 import * as Trelude from "./utils/Trelude.bs.js";
+import * as Readline from "./utils/Readline.bs.js";
 import * as Caml_array from "melange/lib/es6/caml_array.js";
 import * as Caml_format from "melange/lib/es6/caml_format.js";
-
-function $great$great(f, g, x) {
-  return Curry._1(g, Curry._1(f, x));
-}
+import * as Caml_option from "melange/lib/es6/caml_option.js";
 
 function diag1(matrix) {
   return Trelude.sum(Trelude.rangeArr(0, matrix.length).map(function (x) {
@@ -31,24 +30,34 @@ function diagonalDifference(matrix) {
 
 function parse(param) {
   return param.map(function (param) {
-              var param$1 = param.split(" ");
-              return param$1.map(Caml_format.caml_int_of_string);
+              return Trelude.$great$great((function (param) {
+                            return param.split(" ");
+                          }), (function (param) {
+                            return param.map(Caml_format.caml_int_of_string);
+                          }), param);
             });
 }
 
-function let_(prom, cb) {
-  return prom.then(Curry.__1(cb));
+function doWork(param) {
+  return Trelude.$great$great(parse, diagonalDifference, param);
 }
 
-var Async = {
-  let_: let_
-};
-
-function go(param) {
-  console.log("Ask for first value");
+function mapOrLog(msg, f, opt) {
+  if (opt !== undefined) {
+    return Curry._1(f, Caml_option.valFromOption(opt));
+  } else {
+    console.log(msg);
+    return ;
+  }
 }
 
-console.log("Ask for first value");
+Readline.withAll(function (arr) {
+      mapOrLog("Oops!", (function (param) {
+              console.log(Trelude.$great$great(parse, diagonalDifference, Js_list.toVector(param[1])));
+            }), Trelude.List.pop(arr));
+    });
+
+var $great$great = Trelude.$great$great;
 
 export {
   $great$great ,
@@ -56,7 +65,7 @@ export {
   diag2 ,
   diagonalDifference ,
   parse ,
-  Async ,
-  go ,
+  doWork ,
+  mapOrLog ,
 }
 /*  Not a pure module */

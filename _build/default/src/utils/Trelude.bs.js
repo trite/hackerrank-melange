@@ -41,18 +41,33 @@ function get(i, lst) {
   return Belt_List.get(lst, i);
 }
 
+function map(f, lst) {
+  return Belt_List.map(lst, f);
+}
+
+function pop(lst) {
+  return Belt_List.splitAt(lst, 1);
+}
+
 var List = {
   get: get,
-  nth: get
+  nth: get,
+  map: map,
+  pop: pop
 };
 
-function map(f, opt) {
+function map$1(f, opt) {
   return Belt_Option.map(opt, f);
 }
 
+function mapWithDefault(f, def, o) {
+  return Belt_Option.mapWithDefault(o, def, f);
+}
+
 var $$Option = {
-  map: map,
-  getExn: Belt_Option.getExn
+  map: map$1,
+  getExn: Belt_Option.getExn,
+  mapWithDefault: mapWithDefault
 };
 
 function split(prim0, prim1) {
@@ -63,7 +78,7 @@ var $$String = {
   split: split
 };
 
-function map$1(prim0, prim1) {
+function map$2(prim0, prim1) {
   return prim1.map(Curry.__1(prim0));
 }
 
@@ -80,7 +95,7 @@ function reduce(prim0, prim1, prim2) {
 }
 
 var $$Array = {
-  map: map$1,
+  map: map$2,
   get: get$1,
   mapi: mapi,
   reduce: reduce
