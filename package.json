@@ -7,8 +7,6 @@
   },
   "devDependencies": {
     "webpack": "5.72.1",
-    "webpack-cli": "^4.9.2",
-    "bs-bastet": "2.0.0",
-    "relude": "reazen/relude#498c8c59ce4891541825ddf54ee63a07cb7f2968"
+    "webpack-cli": "^4.9.2"
   }
 }

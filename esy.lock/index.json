@@ -1,17 +1,17 @@
 {
-  "checksum": "f6c872fadd2c76ae1b4af571f6bb705d",
+  "checksum": "2c9fac9d9d90dbd8cfce0c6ada4325b1",
   "root": "melange-project@link-dev:./esy.json",
   "node": {
-    "relude@github:reazen/relude#498c8c59ce4891541825ddf54ee63a07cb7f2968@d41d8cd9": {
+    "relude@github:reazen/relude#70aa2dfe0aa0228988126c6a13777c0e13556521@d41d8cd9": {
       "id":
-        "relude@github:reazen/relude#498c8c59ce4891541825ddf54ee63a07cb7f2968@d41d8cd9",
+        "relude@github:reazen/relude#70aa2dfe0aa0228988126c6a13777c0e13556521@d41d8cd9",
       "name": "relude",
       "version":
-        "github:reazen/relude#498c8c59ce4891541825ddf54ee63a07cb7f2968",
+        "github:reazen/relude#70aa2dfe0aa0228988126c6a13777c0e13556521",
       "source": {
         "type": "install",
         "source": [
-          "github:reazen/relude#498c8c59ce4891541825ddf54ee63a07cb7f2968"
+          "github:reazen/relude#70aa2dfe0aa0228988126c6a13777c0e13556521"
         ]
       },
       "overrides": [],
@@ -44,7 +44,7 @@
       "source": { "type": "link-dev", "path": ".", "manifest": "esy.json" },
       "overrides": [],
       "dependencies": [
-        "relude@github:reazen/relude#498c8c59ce4891541825ddf54ee63a07cb7f2968@d41d8cd9",
+        "relude@github:reazen/relude#70aa2dfe0aa0228988126c6a13777c0e13556521@d41d8cd9",
         "ocaml@4.14.0@d41d8cd9",
         "melange@github:melange-re/melange#53a354a69172629033ce63d2d8eb9d8ea7ad1cdc@d41d8cd9",
         "bs-bastet@2.0.0@d41d8cd9", "@opam/dune@opam:3.1.0@4993f3c0"
