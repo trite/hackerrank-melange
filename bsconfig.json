@@ -13,7 +13,9 @@
     "bs-bastet",
     "relude"
   ],
-  "bsc-flags": [],
+  "bsc-flags": [
+    "-open Relude.Globals"
+  ],
   "warnings": {
     "error": "+101"
   }
