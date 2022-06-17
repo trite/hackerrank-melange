@@ -16,7 +16,7 @@
   "esy": {
     "buildsInSource": "unsafe",
     "build": [
-      "ln -sfn #{melange.install} node_modules/melange",
+      "ln -sfn #{melange.install} node_modules/bs-platform",
       "mel build"
     ]
   },
