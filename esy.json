@@ -3,9 +3,7 @@
   "dependencies": {
     "ocaml": "4.14.0",
     "@opam/dune": ">= 3.1.0",
-    "melange": "melange-re/melange#53a354a69172629033ce63d2d8eb9d8ea7ad1cdc",
-    "bs-bastet": "2.0.0",
-    "relude": "reazen/relude#70aa2dfe0aa0228988126c6a13777c0e13556521"
+    "melange": "melange-re/melange#53a354a69172629033ce63d2d8eb9d8ea7ad1cdc"
   },
   "devDependencies": {
     "@opam/ocaml-lsp-server": "ocaml/ocaml-lsp:ocaml-lsp-server.opam#c275140",

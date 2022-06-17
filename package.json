@@ -8,5 +8,9 @@
   "devDependencies": {
     "webpack": "5.72.1",
     "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "bs-bastet": "2.0.0",
+    "relude": "0.66.1"
   }
 }
